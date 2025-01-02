@@ -1,0 +1,36 @@
+body {
+  font-family: "Mulish";
+  font-size: 22px;
+  padding: 56px 190px;
+  display: flex;
+  width: fit-content;
+}
+a {
+  text-decoration: none;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .logo {
+  display: flex;
+  justify-self: start;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  font-size: 18px;
+}
+.nav-links a {
+  color: #7d7d7d;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #333;
+  font-weight: bold;
+}
