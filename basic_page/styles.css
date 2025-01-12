@@ -1,0 +1,59 @@
+body{
+  padding: 0 250px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav {
+}
+
+.nav ul {
+  gap: 40px;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 0;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  padding: 16px;
+}
+ul {
+  list-style-type: unset;
+}
+.banner {
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+}
+.section-content {
+  display: flex;
+  flex-direction: row;
+}
+.section-project{
+  width: 20%;
+}
+.section-work-experience{
+  width: 65%;
+}
+aside{
+  padding: 16px;
+}
+.reviews {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  padding: 16px;
+}
+.review{
+  padding: 16px
+}
+footer{
+text-align: center
+;}
