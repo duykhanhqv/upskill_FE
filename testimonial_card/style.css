@@ -1,0 +1,183 @@
+body {
+  width: 700px;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  line-height: 1.5;
+  justify-content: center;
+}
+p,
+h3 {
+  margin: 0px;
+}
+section {
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+}
+
+.testimonial-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.testimonial-1 {
+  flex-direction: column;
+}
+
+.avatar-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.testimonial-1,
+.testimonial-2 {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.testimonial-1 .comment {
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  padding: 16px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.testimonial-1 .comment p {
+  margin: 0px;
+  position: relative;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-color: black;
+  bottom: 729px;
+  left: 7%;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.testimonial-1 .profile {
+  padding: 16px;
+  gap: 8px;
+  display: flex;
+  flex-direction: row;
+}
+
+.testimonial-1 .profile p {
+  font-size: 12px;
+}
+
+.testimonial-2 {
+  border: 1px black solid;
+  border-radius: 20px;
+  margin: 16px;
+  font-size: 13px;
+}
+
+.testimonial-2 .comment {
+  font-size: 16px;
+}
+
+.testimonial-2 .profile {
+  padding: 24px 0px;
+  gap: 8px;
+  display: flex;
+  flex-direction: row;
+}
+
+.testimonial-3 {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.testimonial-3 .avatar-img {
+  width: 248px;
+  height: 248px;
+  border-radius: 24px;
+}
+
+.profile-comment {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background-color: black;
+  border-radius: 24px;
+  padding: 24px;
+}
+
+.stars {
+  color: gold;
+  font-size: 20px;
+}
+
+.profile-comment .profile .information {
+  line-height: 1.9;
+}
+
+.profile-comment .profile .information h3 {
+  line-height: 2.8;
+}
+.profile-comment .profile .information p {
+  color: rgb(150, 150, 148);
+  line-height: 2.5;
+}
+
+.slideshow-container {
+  text-align: center;
+  border: 1px black solid;
+  border-radius: 24px;
+  margin-top: 16px;
+  padding: 24px 24px;
+}
+
+.slideshow-container p {
+  display: flex;
+  justify-self: center;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.slides {
+  max-width: 300px;
+  margin: 16px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.avatar-round {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.fade {
+  opacity: 0.8;
+  width: 45px;
+  height: 45px;
+}
+
+.name:last-child {
+  text-align: center;
+}
+
+.fa {
+  font-size: 48px;
+}
+
+.navigate-button {
+  font-size: 25px;
+}
+
+.slider-user-name {
+  display: flex;
+  justify-content: center;
+}
