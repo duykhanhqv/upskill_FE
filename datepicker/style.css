@@ -1,0 +1,72 @@
+body {
+  background-color: ghostwhite;
+  font-family: Georgia, 'Times New Roman', Times, serif;;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.date-picker-container {
+  text-align: center;
+  width: 280px;
+}
+
+.date-picker-header {
+  display: flex;
+  padding: 2px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 32px;
+  border: 1px #875bf7 solid;
+  border-radius: 2px;
+  margin-bottom: 8px;
+}
+
+.date-picker-body {
+  padding: 16px;
+  border: 1px gray solid;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;}
+
+.date-picker-body .month {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 8px 0;
+}
+
+.day-names {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 36px;
+  font-weight: 800;
+}
+
+.day-names span {
+  width: 32px;
+}
+
+.date-picker-body .days {
+  display: flex;
+  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 32px 32px 32px 32px 32px 32px 32px;
+  border-collapse: collapse;
+}
+
+.date-picker-body .days span {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.date-picker-body .today{
+  background-color: #875bf7;
+  border-radius: 16px;
+}
