@@ -1,0 +1,52 @@
+body {
+  font-family: "Trebuchet MS", sans-serif;
+  margin: auto;
+  width: 50%;
+}
+
+.tab-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.tab-indexes {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.tab-indexes button {
+  border: none;
+  background-color: #ffff;
+  cursor: pointer;
+}
+
+.tab {
+  margin: 16px;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.tab.active {
+  text-decoration: underline;
+  display: flex;
+  align-items: center;
+}
+
+.tab-contents {
+  gap: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.tab-content {
+  display: none;
+}

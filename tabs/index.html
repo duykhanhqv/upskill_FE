@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tabs</title>
+  </head>
+  <body>
+    <div class="tab-container">
+      <div class="tab-indexes">
+        <button class="tab active" onclick="openTab(event, '1')"> First Tab</button>
+        <button class="tab" onclick="openTab(event, '2')">Second Tab</button>
+        <button class="tab" onclick="openTab(event, '3')">Third Tab</button>
+        <button class="tab" onclick="openTab(event, '4')">Forth Tab</button>
+      </div>
+      <h4>Clicking each tab should hide the content of the other tab and show the content of the clicked tab. By default, the first tab is enabled</h4>
+      <div class="tab-contents">
+        <div id="1" class="tab-content active">First Tab content</div>
+        <div id="2" class="tab-content">Second Tab content</div>
+        <div id="3"  class="tab-content">Third Tab content</div>
+        <div id="4"  class="tab-content">Forth Tab content</div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
