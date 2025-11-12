@@ -20,4 +20,4 @@ Single Page UI at [Live URL](https://duykhanhqv.github.io/upskill_FE/single_page
 Basic HTML Website UI at [Live URL](https://duykhanhqv.github.io/upskill_FE/basic_page/index.html)
 Accessible Form UI at [Live URL](https://duykhanhqv.github.io/upskill_FE/accessible_form_ui/index.html)
 Tooltip UI at [Live URL](https://duykhanhqv.github.io/upskill_FE/tooltip_ui/index.html)
-Tab at [Live URL](https://duykhanhqv.github.io/upskill_FE/tab/index.html)
+Tab at [Live URL](https://duykhanhqv.github.io/upskill_FE/tabs/index.html)
