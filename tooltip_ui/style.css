@@ -7,9 +7,11 @@ body{
   justify-content: center;
   align-items: end;
 }
+
 .nav-bar{
   display: flex;
 }
+
 .item{
   position: relative;
   font-size: 18px;
