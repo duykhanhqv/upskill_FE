@@ -8,6 +8,7 @@
 [Tooltip UI](https://roadmap.sh/projects/tooltip-ui)
 [Tab](https://roadmap.sh/projects/simple-tabs)
 [Tab](https://roadmap.sh/projects/cookie-consent)
+[Restricted Textarea](https://roadmap.sh/projects/restricted-textarea)
 
 
 
@@ -23,3 +24,4 @@ Accessible Form UI at [Live URL](https://duykhanhqv.github.io/upskill_FE/accessi
 Tooltip UI at [Live URL](https://duykhanhqv.github.io/upskill_FE/tooltip_ui/index.html)
 Tab at [Live URL](https://duykhanhqv.github.io/upskill_FE/tabs/index.html)
 Cookie Consent [Live URL](https://duykhanhqv.github.io/upskill_FE/cookie_consent/index.html)
+Restricted Textarea [Live URL](https://duykhanhqv.github.io/upskill_FE/restricted_textarea/index.html)
