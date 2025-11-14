@@ -9,6 +9,7 @@
 [Tab](https://roadmap.sh/projects/simple-tabs)
 [Tab](https://roadmap.sh/projects/cookie-consent)
 [Restricted Textarea](https://roadmap.sh/projects/restricted-textarea)
+[Accordion Component](https://roadmap.sh/projects/accordion)
 
 
 
@@ -25,3 +26,4 @@ Tooltip UI at [Live URL](https://duykhanhqv.github.io/upskill_FE/tooltip_ui/inde
 Tab at [Live URL](https://duykhanhqv.github.io/upskill_FE/tabs/index.html)
 Cookie Consent [Live URL](https://duykhanhqv.github.io/upskill_FE/cookie_consent/index.html)
 Restricted Textarea [Live URL](https://duykhanhqv.github.io/upskill_FE/restricted_textarea/index.html)
+Accordion Component [Live URL](https://duykhanhqv.github.io/upskill_FE/accordion_component/index.html)

@@ -1,0 +1,42 @@
+body{
+  font-family: system-ui;
+}
+
+.accordion-container{
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion-header{
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 24px;
+}
+
+.accordion-description{
+    line-height: 32px ;
+}
+
+.accordion-item-header{
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+    cursor: pointer;    
+}
+
+.accordion-item-content{
+   display: none;
+}
+
+.accordion-item-content.active{
+    display: block;
+    border: 2px solid black;
+    padding: 12px;
+    border-radius: 12px;
+}
