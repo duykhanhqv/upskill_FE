@@ -1,0 +1,57 @@
+body{
+  font-family: system-ui;
+}
+
+.age-calculator{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.input-section{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 0;
+}
+
+.input-section input{
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.input-section input.error{
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #ffe6e6;
+    color: red;
+    border: 1px solid red;
+}
+
+.input-error{
+    color: red;
+    font-size: 0.9em;
+    margin-top: -8px;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.input-section button{
+    font-family: system-ui;
+    font-weight: 700;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(64, 63, 66);
+    color: white;
+    cursor: pointer;
+}
+
+.calculate-result{
+    margin-top: 16px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
