@@ -1,0 +1,18 @@
+<app-progress-bar [progressBar]="getProgress()"></app-progress-bar>
+<div class="flash-card-container">
+  <div class="card-question">
+    {{ flashCardList()[0].question }}
+  </div>
+  <div class="card-answer" hidden>
+    {{ flashCardList()[0].answer }}
+  </div>
+  <div class="card-controls">
+    <button class="prev-button" (click)="previousCard()">
+      <i class="fas fa-angle-left"></i> Previous
+    </button>
+    <button class="show-answer-button" (click)="openAnswer()">Show Answer</button>
+    <button class="next-button" (click)="nextCard()">
+      Next <i class="fas fa-angle-right"></i>
+    </button>
+  </div>
+</div>
