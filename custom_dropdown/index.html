@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Custom dropdown</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div class="drowdown-container">
+        <div class="drowdown-header" onclick="toggleDrowdown()">
+            Select an option
+            <span class="drowdown-arrow">&#9662;</span>
+        </div>
+        <div class="drowdown-list" hidden>
+            <div class="drowdown-item" onclick="selectOption(event, 'Option 1')">Option 1</div>
+            <div class="drowdown-item" onclick="selectOption(event, 'Option 2')">Option 2</div>
+            <div class="drowdown-item" onclick="selectOption(event, 'Option 3')">Option 3</div>
+        </div>
+    </div>
+</body>
+</html>

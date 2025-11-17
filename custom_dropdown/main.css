@@ -1,0 +1,52 @@
+body{
+  font-family: sans-serif;
+}
+
+.drowdown-container{
+    width: 200px;
+    height: 32px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 2px solid purple;
+    
+}
+.drowdown-header{
+    cursor: pointer;
+}
+
+.drowdown-list{
+    margin-top: 4px;
+    width: 200px;
+    overflow: hidden;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    top: 48px;
+    border: 2px solid purple; 
+    border-radius: 8px;
+}
+.drowdown-item{
+    padding: 8px;
+    cursor: pointer;
+  border-bottom: 2px solid purple;
+}
+
+.drowdown-item.selected{
+    padding: 8px;
+    cursor: pointer;
+  border-bottom: 2px solid purple;
+  background-color: #e0b3ff;
+}
+
+
+.drowdown-item:last-child {
+  border-bottom: none; 
+}
+
+.drowdown-item:hover {
+  background: #f5f5f5; 
+  cursor: pointer;
+}

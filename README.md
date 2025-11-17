@@ -26,6 +26,8 @@
 
 [Flash cards](https://roadmap.sh/projects/flash-cards)
 
+[Custom dropdown](https://roadmap.sh/projects/custom-dropdown)
+
 
 
 
@@ -56,3 +58,5 @@ Accordion Component at [Live URL](https://duykhanhqv.github.io/upskill_FE/accord
 Calculate Age at [Live URL](https://duykhanhqv.github.io/upskill_FE/age_calculator/index.html)
 
 Flash Cards at [Live URL](https://duykhanhqv.github.io/upskill_FE/flash_cards)
+
+Custom dropdown at [Live URL](https://duykhanhqv.github.io/upskill_FE/custom_dropdown/index.html)
