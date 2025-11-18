@@ -28,6 +28,8 @@
 
 [Custom dropdown](https://roadmap.sh/projects/custom-dropdown)
 
+[Task tracker](https://roadmap.sh/projects/task-tracker-js)
+
 
 
 
@@ -60,3 +62,5 @@ Calculate Age at [Live URL](https://duykhanhqv.github.io/upskill_FE/age_calculat
 Flash Cards at [Live URL](https://duykhanhqv.github.io/upskill_FE/flash_cards)
 
 Custom dropdown at [Live URL](https://duykhanhqv.github.io/upskill_FE/custom_dropdown/index.html)
+
+Task tracker at [Live URL](https://duykhanhqv.github.io/upskill_FE/task_tracker/index.html)
