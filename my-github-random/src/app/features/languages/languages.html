@@ -1,18 +1,17 @@
 <div class="language-container">
-  <div class="drowdown-header">
+  <div class="dropdown-header">
     <i class="fa-solid fa-square language-icon"></i>
     <h4>Github Repository Finder</h4>
   </div>
 
-  <div class="drowdown-container" (click)="openListLanguages()">
-    <div class="drowdown-selector">
-      Select a Language
-      <span class="drowdown-arrow">&#9662;</span>
+  <div class="dropdown-container" (click)="openListLanguages()">
+    <div class="dropdown-selector">
+      Select a Language ▼
     </div>
-    <div class="drowdown-list" hidden>
-      <div class="drowdown-item" >Option 1</div>
-      <div class="drowdown-item" >Option 2</div>
-      <div class="drowdown-item" >Option 3</div>
-    </div>
+    <ul class="dropdown-list" hidden>
+      @for(language of (languagesList | async); track language.value) {
+      <li class="dropdown-item" (click)="chooseLanguage(language)">{{language.title}}</li>
+      }
+    </ul>
   </div>
 </div>

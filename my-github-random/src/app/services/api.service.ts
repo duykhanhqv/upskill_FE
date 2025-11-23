@@ -1,13 +1,21 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
+import { Language } from '../interfaces/language';
+import { Observable } from 'rxjs';
+import { RepositoriesResponse } from '../interfaces/repository';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ApiService {
-  readonly baseUrl = 'https://raw.githubusercontent.com/'
+  private http = inject(HttpClient);
 
-  // getAllLanguage () Language[]{
-  //   return this.
-  // }
+   getAllLanguages (): Observable<Language[]>{
+    return this.http.get<Language[]>(`https://raw.githubusercontent.com/kamranahmedse/githunt/master/src/components/filters/language-filter/languages.json`)
+  }
+
+  getRepositoriesByLanguage(language: string): Observable<RepositoriesResponse>{
+    return this.http.get<RepositoriesResponse>(`https://api.github.com/search/repositories?q=language:${language}&sort=stars&order=desc`)
+  }
   
 }

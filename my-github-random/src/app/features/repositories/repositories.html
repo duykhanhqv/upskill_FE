@@ -1,7 +1,33 @@
 <div class="repository-container">
-    <app-languages></app-languages>
-    <span class="repository-content">
-        Please select a language
-    </span>
-    
+  <app-languages (languageSelected)="onLanguageSelected($event)"></app-languages>
+
+  <div class="repository-content">
+    @if (!isLoading()) {
+    <span class="repository-header"> @if (!selectedLanguage) { Please select a language } </span>
+
+    } @if (isLoading()) {
+    <div class="loading-state">
+      <div class="spinner"></div>
+      <p>Loading repositories...</p>
+    </div>
+    } 
+    @if (repository && !isLoading()) {
+    <div class="repository-item">
+      <p class="repository-name">
+        <a [href]="repository.html_url" target="_blank">{{ repository.name }}</a>
+      </p>
+      <p class="repository-description">{{ repository.description }}</p>
+
+      <div class="repository-information">
+        <span> • {{ repository.language }}</span>
+        <span>⭐ {{ repository.stargazers_count }}</span>
+        <span>🐞 {{ repository.open_issues_count }}</span>
+      </div>
+    </div>
+    } @if (repository) {
+    <div class="refresh-repository">
+      <button (click)="refreshRepository()">Refresh</button>
+    </div>
+    }
+  </div>
 </div>
