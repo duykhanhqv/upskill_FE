@@ -1,0 +1,43 @@
+document.addEventListener('DOMContentLoaded', function() {
+  const sortOptions = document.querySelectorAll('input[name="sort"]');
+  const productGrid = document.querySelector('.product-grid');
+  
+  sortOptions.forEach(option => {
+    option.addEventListener('change', function() {
+      const sortValue = this.value;
+      const products = Array.from(productGrid.querySelectorAll('.product-card'));
+      
+      products.sort((a, b) => {
+        switch(sortValue) {
+          case 'rating':
+            const ratingA = parseFloat(a.querySelector('.stargazers_count').textContent.trim());
+            const ratingB = parseFloat(b.querySelector('.stargazers_count').textContent.trim());
+            return ratingB - ratingA;
+            
+          case 'price-low':
+            const priceA = parseFloat(a.querySelector('.price').textContent.replace(/\./g, ''));
+            const priceB = parseFloat(b.querySelector('.price').textContent.replace(/\./g, ''));
+            return priceA - priceB;
+            
+          case 'price-high':
+            const priceA2 = parseFloat(a.querySelector('.price').textContent.replace(/\./g, ''));
+            const priceB2 = parseFloat(b.querySelector('.price').textContent.replace(/\./g, ''));
+            return priceB2 - priceA2;
+            
+          case 'newest':
+            // Reverse order for newest
+            return -1;
+            
+          case 'popular':
+          default:
+            // Keep original order
+            return 0;
+        }
+      });
+      
+      // Clear and re-append sorted products
+      productGrid.innerHTML = '';
+      products.forEach(product => productGrid.appendChild(product));
+    });
+  });
+});
