@@ -1,165 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Dopamean Studio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
-    <script src="https://kit.fontawesome.com/cebef65839.js" crossorigin="anonymous"></script>
-</head>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Dopamean Studio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+        <script src="main.js"></script>
+        <script src="https://kit.fontawesome.com/cebef65839.js"
+            crossorigin="anonymous"></script>
+    </head>
 
-<body>
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <h1>DOPAMEAN</h1>
+    <body>
+        <header>
+            <div class="header-container">
+                <div class="logo">
+                    <h1>DOPAMEAN</h1>
+                </div>
+
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input"
+                        placeholder="Search in products..." />
+                </div>
+
+                <div class="header-icons">
+                    <div class="icon">
+                        <i class="far fa-user"></i>
+                    </div>
+                    <div class="icon cart-icon">
+                        <a href="checkout.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-badge">2</span>
+                        </a>
+                    </div>
+                </div>
             </div>
+        </header>
+        <main>
+            <div class="product-detail-container">
+                <div class="product-title">
+                    <h1>Product Name</h1>
+                </div>
+                <section class="product-main">
+                    <div class="product-detail">
+                        <div class="product-image-section">
+                            <div class="thumbnail-images">
+                                <img src="assets/products/product1.png"
+                                    alt="Product 1" />
+                                <img src="assets/products/product1.png"
+                                    alt="Product 1" />
+                                <img src="assets/products/product1.png"
+                                    alt="Product 1" />
+                                <img src="assets/products/product1.png"
+                                    alt="Product 1" />
+                            </div>
+                            <div class="main-image">
+                                <img src="assets/products/product1.png"
+                                    alt="Product 1" />
+                            </div>
+                        </div>
+                        <div class="product-description-section">
+                            <h2>Product Description</h2>
+                            <p>
+                                This is a detailed description of the product.
+                                It includes all the features,
+                                specifications, and other relevant information
+                                that a customer might need to
+                                make an informed purchasing decision.
+                            </p>
+                        </div>
+                    </div>
 
-            <div class="search-box">
-                <i class="fas fa-search search-icon"></i>
-                <input type="text" class="search-input" placeholder="Search in products..." />
+                    <div class="product-info">
+                        <div class="prices">
+                            <p class="price">400.000</p>
+                            <p class="price-old">450000</p>
+                        </div>
+                        <div class="product-size">
+                            <label for="size">Size: M</label>
+                            <div class="size-selector">
+                                <label>
+                                    <input type="radio" name="size" value="S">
+                                    <span>S</span>
+                                </label>
+
+                                <label>
+                                    <input type="radio" name="size" value="M"
+                                        checked>
+                                    <span>M</span>
+                                </label>
+
+                                <label>
+                                    <input type="radio" name="size" value="L">
+                                    <span>L</span>
+                                </label>
+
+                                <label>
+                                    <input type="radio" name="size" value="XL">
+                                    <span>XL</span>
+                                </label>
+
+                                <label class="disabled">
+                                    <input type="radio" name="size" value="2XL"
+                                        disabled>
+                                    <span>2XL</span>
+                                </label>
+                            </div>
+
+                        </div>
+                        <button class="add-to-cart-button"><i
+                                class="fas fa-cart-plus"></i>Add to
+                            Cart</button>
+                    </div>
+                </section>
+
+                <section class="recommended-products">
+                    <h2>Recommended Products</h2>
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <a href="detail.html">
+                                <img src="assets/products/product2.png"
+                                    alt="Product 2" />
+                            </a>
+                            <div class="product-info">
+                                <div class="product-details">
+                                    <a href="detail.html">
+                                        <h4>Product 2</h4>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <a href="detail.html">
+                                <img src="assets/products/product3.png"
+                                    alt="Product 3" />
+                            </a>
+                            <div class="product-info">
+                                <div class="product-details">
+                                    <a href="detail.html">
+                                        <h4>Product 3</h4>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <a href="detail.html">
+                                <img src="assets/products/product4.png"
+                                    alt="Product 4" />
+                            </a>
+                            <div class="product-info">
+                                <div class="product-details">
+                                    <a href="detail.html">
+                                        <h4>Product 4</h4>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <a href="detail.html">
+                                <img src="assets/products/product5.png"
+                                    alt="Product 5" />
+                            </a>
+                            <div class="product-info">
+                                <div class="product-details">
+                                    <a href="detail.html">
+                                        <h4>Product 5</h4>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
-
-            <div class="header-icons">
-                <div class="icon">
-                    <i class="far fa-user"></i>
-                </div>
-                <div class="icon cart-icon">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span class="cart-badge">2</span>
-                </div>
+        </main>
+        <div class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 Dopamean Studio. All rights reserved.</p>
             </div>
-        </div>
-    </header>
-    <main>
-        <div class="product-detail-container">
-                                               <div class="product-title">
-                        <h1>Product Name</h1>
-                    </div>
-            <section class="product-main">
-                <div class="product-detail">
-                    <div class="product-image-section">
-                        <div class="thumbnail-images">
-                            <img src="assets/products/product1.png" alt="Product 1" />
-                            <img src="assets/products/product1.png" alt="Product 1" />
-                            <img src="assets/products/product1.png" alt="Product 1" />
-                            <img src="assets/products/product1.png" alt="Product 1" />
-                        </div>
-                        <div class="main-image">
-                            <img src="assets/products/product1.png" alt="Product 1" />
-                        </div>
-                    </div>
-                    <div class="product-description-section">
-                        <h2>Product Description</h2>
-                        <p>
-                            This is a detailed description of the product. It includes all the features,
-                            specifications, and other relevant information that a customer might need to
-                            make an informed purchasing decision.
-                        </p>
-                    </div>
-                </div>
+        </body>
 
-                <div class="product-info">
-                    <div class="prices">
-                        <p class="price">400.000</p>
-                        <p class="price-old">450000</p>
-                    </div>
-                    <div class="product-size">
-                        <label for="size">Size: M</label>
-                        <div class="size-selector">
-                            <label>
-                                <input type="radio" name="size" value="S">
-                                <span>S</span>
-                            </label>
-
-                            <label>
-                                <input type="radio" name="size" value="M" checked>
-                                <span>M</span>
-                            </label>
-
-                            <label>
-                                <input type="radio" name="size" value="L">
-                                <span>L</span>
-                            </label>
-
-                            <label>
-                                <input type="radio" name="size" value="XL">
-                                <span>XL</span>
-                            </label>
-
-                            <label class="disabled">
-                                <input type="radio" name="size" value="2XL" disabled>
-                                <span>2XL</span>
-                            </label>
-                        </div>
-
-                    </div>
-                    <button class="add-to-cart-button"><i class="fas fa-cart-plus"></i>Add to Cart</button>
-                </div>
-            </section>
-
-            <section class="recommended-products">
-                <h2>Recommended Products</h2>
-                <div class="product-grid">
-                    <div class="product-card">
-                        <a href="detail.html">
-                            <img src="assets/products/product2.png" alt="Product 2" />
-                        </a>
-                        <div class="product-info">
-                            <div class="product-details">
-                                <a href="detail.html">
-                                    <h4>Product 2</h4>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <a href="detail.html">
-                            <img src="assets/products/product3.png" alt="Product 3" />
-                        </a>
-                        <div class="product-info">
-                            <div class="product-details">
-                                <a href="detail.html">
-                                    <h4>Product 3</h4>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <a href="detail.html">
-                            <img src="assets/products/product4.png" alt="Product 4" />
-                        </a>
-                        <div class="product-info">
-                            <div class="product-details">
-                                <a href="detail.html">
-                                    <h4>Product 4</h4>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <a href="detail.html">
-                            <img src="assets/products/product5.png" alt="Product 5" />
-                        </a>
-                        <div class="product-info">
-                            <div class="product-details">
-                                <a href="detail.html">
-                                    <h4>Product 5</h4>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </main>
-    <div class="footer">
-        <div class="footer-content">
-            <p>&copy; 2024 Dopamean Studio. All rights reserved.</p>
-        </div>
-</body>
-
-</html>
+    </html>

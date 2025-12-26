@@ -36,7 +36,10 @@ body {
 * {
   box-sizing: border-box;
 }
+i {
+  content: "\eb1c";
 
+}
 p {
   margin: 0;
 }
@@ -624,4 +627,128 @@ font-weight: 600;
   gap: 8px;
   align-items: center;
   justify-content: center;  
+}
+
+.checkout-page{
+  padding: 40px 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
+.page-title{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.page-title h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  line-height: 40px;
+  font-style: semibold;
+  margin: 0;
+}
+
+.breadcrumb {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-size: medium;
+  color: #4B5563;
+}
+
+.breadcrumb a {
+    font-family: "Poppins", sans-serif;
+  text-decoration: none;
+    font-weight: medium;
+  color: #4B5563;
+}
+.page-content{
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.contact-info{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border: 1px solid #E5E7EB;
+  border-radius: 36px;
+}
+
+.contact-header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  padding: 24px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.contact-header i{
+  font-size: 24px;
+  color: #111827;
+}
+
+.contact-method{
+  padding: 24px;
+  display: flex;
+  flex-direction: row ;
+  gap: 24px;
+}
+
+.user-input{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.user-input label{
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #111827;
+  font-weight: 600;
+}
+
+.user-input input{
+  width: 100%;
+  height: 44px;
+  padding: 12px 16px;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #1F2937;
+  outline: none;
+}
+.checkout-details{
+  width: 45%;
+}
+
+.order-summary{
+  width: 52%;
+}
+
+
+
+.shipping-address{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border: 1px solid #E5E7EB;
+  border-radius: 36px;
+}
+.shipping-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+.shipping-header i{
+  font-size: 24px;
+  color: #111827;
 }
