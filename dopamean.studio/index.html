@@ -46,9 +46,121 @@
       <div class="sort-filter-mobile">
         <div class="filter-mobile"><i class="ti ti-filter-cog"></i>
           <span>Filter</span></div>
+        <div class="side-bar-mobile">
+          <div class="mobile-filter-header">
+            <h3>Filters</h3>
+            <button class="close-filter-btn"><i class="ti ti-x"></i></button>
+          </div>
+          <section>
+            <h2 class="categories">Categories</h2>
+            <ul class="list-categories">
+              <li>
+                <label class="category-item">
+                  <input type="checkbox" name="category" value="mens-fashion" />
+                  <span>Men's fashion</span>
+                </label>
+              </li>
+              <li>
+                <label class="category-item">
+                  <input type="checkbox" name="category"
+                    value="womens-fashion" />
+                  <span>Women's fashion</span>
+                </label>
+              </li>
+              <li>
+                <label class="category-item">
+                  <input type="checkbox" name="category" value="kids-toys" />
+                  <span>Kids & Toys</span>
+                </label>
+              </li>
+              <li>
+                <label class="category-item">
+                  <input type="checkbox" name="category" value="accessories" />
+                  <span>Accessories</span>
+                </label>
+              </li>
+              <li>
+                <label class="category-item">
+                  <input type="checkbox" name="category" value="cosmetics" />
+                  <span>Cosmetics</span>
+                </label>
+              </li>
+              <li>
+                <label class="category-item">
+                  <input type="checkbox" name="category" value="shoes" />
+                  <span>Shoes</span>
+                </label>
+              </li>
+              <li>
+                <label class="category-item">
+                  <input type="checkbox" name="category" value="sports" />
+                  <span>Sports</span>
+                </label>
+              </li>
+            </ul>
+          </section>
+
+          <section class="filter-section">
+            <h3>Price range</h3>
+            <input
+              type="range"
+              id="price-range"
+              class="price-range-slider"
+              min="0"
+              max="1000"
+              value="500" />
+            <div class="price-inputs">
+              <div class="price-input-group">
+                <label for="min-price">Min price</label>
+                <div class="input-wrapper">
+                  <input type="number" id="min-price" value="100" />
+                  <span class="currency">$</span>
+                </div>
+              </div>
+              <div class="price-input-group">
+                <label for="max-price">Max price</label>
+                <div class="input-wrapper">
+                  <input type="number" id="max-price" value="500" />
+                  <span class="currency">$</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
         <div class="sort-mobile"><i class="ti ti-sort-descending"></i>
           <span>Sort</span></div>
+        <div class="sort-bar-mobile">
+          <div class="mobile-sort-header">
+            <h3>Sort Options</h3>
+            <button class="close-sort-btn"><i class="ti ti-x"></i></button>
+          </div>
+          <section class="sort-order-mobile">
+            <div class="sort-options">
+              <label class="sort-option">
+                <input type="radio" name="sort-mobile" value="popular" />
+                <span>Most Popular</span>
+              </label>
+              <label class="sort-option">
+                <input type="radio" name="sort-mobile" value="rating" />
+                <span>Best Rating</span>
+              </label>
+              <label class="sort-option">
+                <input type="radio" name="sort-mobile" value="newest" />
+                <span>Newest</span>
+              </label>
+              <label class="sort-option">
+                <input type="radio" name="sort-mobile" value="price-low" />
+                <span>Price Low - High</span>
+              </label>
+              <label class="sort-option">
+                <input type="radio" name="sort-mobile" value="price-high" />
+                <span>Price High - Low</span>
+              </label>
+            </div>
+          </section>
+        </div>
       </div>
+      <div class="mobile-overlay"></div>
       <aside class="side-bar">
         <section>
           <h2 class="categories">Categories</h2>
