@@ -1,4 +1,68 @@
 document.addEventListener('DOMContentLoaded', function() {
+  // Mobile filter popup functionality
+  const filterMobile = document.querySelector('.filter-mobile');
+  const sideBarMobile = document.querySelector('.side-bar-mobile');
+  const sortMobile = document.querySelector('.sort-mobile');
+  const sortBarMobile = document.querySelector('.sort-bar-mobile');
+  const mobileOverlay = document.querySelector('.mobile-overlay');
+  const closeFilterBtn = document.querySelector('.close-filter-btn');
+  const closeSortBtn = document.querySelector('.close-sort-btn');
+
+  // Open mobile filter
+  if (filterMobile) {
+    filterMobile.addEventListener('click', function() {
+      sideBarMobile.classList.add('active');
+      mobileOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Prevent scrolling
+    });
+  }
+
+  // Open mobile sort
+  if (sortMobile) {
+    sortMobile.addEventListener('click', function() {
+      sortBarMobile.classList.add('active');
+      mobileOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Prevent scrolling
+    });
+  }
+
+  // Close mobile filter
+  function closeMobileFilter() {
+    if (sideBarMobile) {
+      sideBarMobile.classList.remove('active');
+    }
+    mobileOverlay.classList.remove('active');
+    document.body.style.overflow = ''; // Restore scrolling
+  }
+
+  // Close mobile sort
+  function closeMobileSort() {
+    if (sortBarMobile) {
+      sortBarMobile.classList.remove('active');
+    }
+    mobileOverlay.classList.remove('active');
+    document.body.style.overflow = ''; // Restore scrolling
+  }
+
+  // Close filter button
+  if (closeFilterBtn) {
+    closeFilterBtn.addEventListener('click', closeMobileFilter);
+  }
+
+  // Close sort button
+  if (closeSortBtn) {
+    closeSortBtn.addEventListener('click', closeMobileSort);
+  }
+
+  // Close on overlay click
+  if (mobileOverlay) {
+    mobileOverlay.addEventListener('click', function() {
+      closeMobileFilter();
+      closeMobileSort();
+    });
+  }
+
+  // Sort functionality
   const sortOptions = document.querySelectorAll('input[name="sort"]');
   const productGrid = document.querySelector('.product-grid');
   

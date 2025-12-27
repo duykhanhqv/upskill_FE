@@ -1,0 +1,17 @@
+{
+  "name": "dopamean.studio",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "scss": "sass main.scss main.css",
+    "scss:watch": "sass --watch main.scss:main.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.83.0"
+  }
+}

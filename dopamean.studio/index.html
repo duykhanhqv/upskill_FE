@@ -6,19 +6,17 @@
     <title>Dopamean Studio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@tabler/icons@latest/icons-react/dist/index.umd.min.js"></script>
     <link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
     <script
-      src="https://cdn.jsdelivr.net/npm/@tabler/icons@1.74.0/icons-react/dist/index.umd.min.js"></script>
+      src="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/js/tabler.min.js"></script>
+    <script src="main.js" defer></script>
     <script
       src="https://kit.fontawesome.com/cebef65839.js"
       crossorigin="anonymous"></script>
-
   </head>
   <body>
+    <!-- Header Section -->
     <header>
       <div class="header-container">
         <div class="logo">
@@ -34,67 +32,185 @@
         </div>
 
         <div class="header-icons">
-          <div class="icon">
-            <i class="far fa-user"></i>
-          </div>
           <div class="icon cart-icon">
-            <a href="checkout.html">
-              <i class="fas fa-shopping-cart"></i>
-              <span class="cart-badge">2</span>
-            </a>
+            <i class="ti ti-garden-cart"></i>
+            <span class="cart-badge">2</span>
           </div>
         </div>
       </div>
     </header>
-    <main>
 
-      <div class="side-bar">
-        <p class="categories">Categories</p>
-        <ul class="list-categories">
-          <li>
-            <label class="category-item">
-              <input type="checkbox" name="category" value="mens-fashion" />
-              <span>Men's fashion</span>
-            </label>
-          </li>
-          <li>
-            <label class="category-item">
-              <input type="checkbox" name="category" value="womens-fashion" />
-              <span>Women's fashion</span>
-            </label>
-          </li>
-          <li>
-            <label class="category-item">
-              <input type="checkbox" name="category" value="kids-toys" />
-              <span>Kids & Toys</span>
-            </label>
-          </li>
-          <li>
-            <label class="category-item">
-              <input type="checkbox" name="category" value="accessories" />
-              <span>Accessories</span>
-            </label>
-          </li>
-          <li>
-            <label class="category-item">
-              <input type="checkbox" name="category" value="cosmetics" />
-              <span>Cosmetics</span>
-            </label>
-          </li>
-          <li>
-            <label class="category-item">
-              <input type="checkbox" name="category" value="shoes" />
-              <span>Shoes</span>
-            </label>
-          </li>
-          <li>
-            <label class="category-item">
-              <input type="checkbox" name="category" value="sports" />
-              <span>Sports</span>
-            </label>
-          </li>
-        </ul>
-        <div class="filter-section">
+    <!-- Main Content -->
+    <main>
+      <!-- Sidebar Filters -->
+      <div class="sort-filter-mobile">
+        <div class="filter-mobile"><i class="ti ti-filter-cog"></i>
+          <span>Filter</span></div>
+        <div class="side-bar-mobile">
+          <div class="mobile-filter-header">
+            <h3>Filters</h3>
+            <button class="close-filter-btn"><i class="ti ti-x"></i></button>
+          </div>
+          <section>
+            <h2 class="categories">Categories</h2>
+            <ul class="list-categories">
+              <li>
+                <label class="category-item">
+                  <input type="checkbox" name="category" value="mens-fashion" />
+                  <span>Men's fashion</span>
+                </label>
+              </li>
+              <li>
+                <label class="category-item">
+                  <input type="checkbox" name="category"
+                    value="womens-fashion" />
+                  <span>Women's fashion</span>
+                </label>
+              </li>
+              <li>
+                <label class="category-item">
+                  <input type="checkbox" name="category" value="kids-toys" />
+                  <span>Kids & Toys</span>
+                </label>
+              </li>
+              <li>
+                <label class="category-item">
+                  <input type="checkbox" name="category" value="accessories" />
+                  <span>Accessories</span>
+                </label>
+              </li>
+              <li>
+                <label class="category-item">
+                  <input type="checkbox" name="category" value="cosmetics" />
+                  <span>Cosmetics</span>
+                </label>
+              </li>
+              <li>
+                <label class="category-item">
+                  <input type="checkbox" name="category" value="shoes" />
+                  <span>Shoes</span>
+                </label>
+              </li>
+              <li>
+                <label class="category-item">
+                  <input type="checkbox" name="category" value="sports" />
+                  <span>Sports</span>
+                </label>
+              </li>
+            </ul>
+          </section>
+
+          <section class="filter-section">
+            <h3>Price range</h3>
+            <input
+              type="range"
+              id="price-range"
+              class="price-range-slider"
+              min="0"
+              max="1000"
+              value="500" />
+            <div class="price-inputs">
+              <div class="price-input-group">
+                <label for="min-price">Min price</label>
+                <div class="input-wrapper">
+                  <input type="number" id="min-price" value="100" />
+                  <span class="currency">$</span>
+                </div>
+              </div>
+              <div class="price-input-group">
+                <label for="max-price">Max price</label>
+                <div class="input-wrapper">
+                  <input type="number" id="max-price" value="500" />
+                  <span class="currency">$</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="sort-mobile"><i class="ti ti-sort-descending"></i>
+          <span>Sort</span></div>
+        <div class="sort-bar-mobile">
+          <div class="mobile-sort-header">
+            <h3>Sort Options</h3>
+            <button class="close-sort-btn"><i class="ti ti-x"></i></button>
+          </div>
+          <section class="sort-order-mobile">
+            <div class="sort-options">
+              <label class="sort-option">
+                <input type="radio" name="sort-mobile" value="popular" />
+                <span>Most Popular</span>
+              </label>
+              <label class="sort-option">
+                <input type="radio" name="sort-mobile" value="rating" />
+                <span>Best Rating</span>
+              </label>
+              <label class="sort-option">
+                <input type="radio" name="sort-mobile" value="newest" />
+                <span>Newest</span>
+              </label>
+              <label class="sort-option">
+                <input type="radio" name="sort-mobile" value="price-low" />
+                <span>Price Low - High</span>
+              </label>
+              <label class="sort-option">
+                <input type="radio" name="sort-mobile" value="price-high" />
+                <span>Price High - Low</span>
+              </label>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="mobile-overlay"></div>
+      <aside class="side-bar">
+        <section>
+          <h2 class="categories">Categories</h2>
+          <ul class="list-categories">
+            <li>
+              <label class="category-item">
+                <input type="checkbox" name="category" value="mens-fashion" />
+                <span>Men's fashion</span>
+              </label>
+            </li>
+            <li>
+              <label class="category-item">
+                <input type="checkbox" name="category" value="womens-fashion" />
+                <span>Women's fashion</span>
+              </label>
+            </li>
+            <li>
+              <label class="category-item">
+                <input type="checkbox" name="category" value="kids-toys" />
+                <span>Kids & Toys</span>
+              </label>
+            </li>
+            <li>
+              <label class="category-item">
+                <input type="checkbox" name="category" value="accessories" />
+                <span>Accessories</span>
+              </label>
+            </li>
+            <li>
+              <label class="category-item">
+                <input type="checkbox" name="category" value="cosmetics" />
+                <span>Cosmetics</span>
+              </label>
+            </li>
+            <li>
+              <label class="category-item">
+                <input type="checkbox" name="category" value="shoes" />
+                <span>Shoes</span>
+              </label>
+            </li>
+            <li>
+              <label class="category-item">
+                <input type="checkbox" name="category" value="sports" />
+                <span>Sports</span>
+              </label>
+            </li>
+          </ul>
+        </section>
+
+        <section class="filter-section">
           <h3>Price range</h3>
           <input
             type="range"
@@ -105,28 +221,23 @@
             value="500" />
           <div class="price-inputs">
             <div class="price-input-group">
-              <label>Min price</label>
+              <label for="min-price">Min price</label>
               <div class="input-wrapper">
-                <input
-                  type="number"
-                  id="min-price"
-                  value="100" />
+                <input type="number" id="min-price" value="100" />
                 <span class="currency">$</span>
               </div>
             </div>
             <div class="price-input-group">
-              <label>Max price</label>
+              <label for="max-price">Max price</label>
               <div class="input-wrapper">
-                <input
-                  type="number"
-                  id="max-price"
-                  value="500" />
+                <input type="number" id="max-price" value="500" />
                 <span class="currency">$</span>
               </div>
             </div>
           </div>
-        </div>
-        <div class="sort-order">
+        </section>
+
+        <section class="sort-order">
           <h3>Sort order</h3>
           <div class="sort-options">
             <label class="sort-option">
@@ -143,135 +254,148 @@
             </label>
             <label class="sort-option">
               <input type="radio" name="sort" value="price-low" />
-              <span>Price Low - Hight</span>
+              <span>Price Low - High</span>
             </label>
             <label class="sort-option">
               <input type="radio" name="sort" value="price-high" />
-              <span>Price Hight - Low</span>
+              <span>Price High - Low</span>
             </label>
           </div>
-        </div>
-      </div>
+        </section>
+      </aside>
+
+      <!-- Product List -->
       <div class="product-list">
-
         <div class="product-grid">
-          <div class="product-card">
+          <!-- Product Card 1 -->
+          <article class="product-card">
             <a href="detail.html">
-
               <img src="assets/products/product1.png" alt="Product 1" />
             </a>
-            <div class="product-info">
+
+            <div class="product-grid-info">
               <div class="product-details">
                 <a href="detail.html">
-                  <h4>Product 1</h4>
-                </a>
+                  <h4>Product 1</h4> </a>
                 <h6>Summer Vibes Shirt</h6>
-                <div class="stargazers_count">
-                  4.5 <i class="fas fa-star"></i>
-                </div>
               </div>
               <div class="prices">
                 <p class="price">400.000</p>
                 <p class="price-old">450000</p>
               </div>
             </div>
-          </div>
-          <div class="product-card">
-            <img src="assets/products/product2.png" alt="Product 2" />
-            <div class="product-info">
+          </article>
+
+          <!-- Product Card 2 -->
+          <article class="product-card">
+
+            <a href="detail.html">
+              <img src="assets/products/product2.png" alt="Product 2" />
+            </a>
+            <div class="product-grid-info">
               <div class="product-details">
-                <h4>Product 2</h4>
+                <a href="detail.html">
+                  <h4>Product 2</h4> </a>
                 <h6>Summer Vibes Shirt</h6>
-                <div class="stargazers_count">
-                  4.0 <i class="fas fa-star"></i>
-                </div>
               </div>
               <div class="prices">
                 <p class="price">500.000</p>
                 <p class="price-old">550000</p>
               </div>
             </div>
-          </div>
-          <div class="product-card">
-            <img src="assets/products/product3.png" alt="Product 3" />
-            <div class="product-info">
+          </article>
+
+          <!-- Product Card 3 -->
+          <article class="product-card">
+            <a href="detail.html">
+
+              <img src="assets/products/product3.png" alt="Product 3" />
+            </a>
+            <div class="product-grid-info">
               <div class="product-details">
-                <h4>Product 3</h4>
+                <a href="detail.html">
+                  <h4>Product 3</h4> </a>
                 <h6>Summer Vibes Shirt</h6>
-                <div class="stargazers_count">
-                  5.0 <i class="fas fa-star"></i>
-                </div>
               </div>
               <div class="prices">
                 <p class="price">400.000</p>
                 <p class="price-old">450000</p>
               </div>
             </div>
-          </div>
-          <div class="product-card">
-            <img src="assets/products/product4.png" alt="Product 4" />
-            <div class="product-info">
-              <div class="product-details">
-                <h4>Product 4</h4>
-                <h6>Summer Vibes Shirt</h6>
-                <div class="stargazers_count">
-                  5.0 <i class="fas fa-star"></i>
+          </article>
+
+          <!-- Product Card 4 -->
+          <article class="product-card">
+
+            <a href="detail.html">
+              <img src="assets/products/product4.png" alt="Product 4" />
+              <div class="product-grid-info">
+                <div class="product-details">
+                  <a href="detail.html">
+                    <h4>Product 4</h4> </a>
+                  <h6>Summer Vibes Shirt</h6>
+                </div>
+                <div class="prices">
+                  <p class="price">400.000</p>
+                  <p class="price-old">450000</p>
                 </div>
               </div>
-              <div class="prices">
-                <p class="price">400.000</p>
-                <p class="price-old">450000</p>
-              </div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="assets/products/product5.png" alt="Product 5" />
-            <div class="product-info">
-              <div class="product-details">
-                <h4>Product 5</h4>
-                <h6>Summer Vibes Shirt</h6>
-                <div class="stargazers_count">
-                  5.0 <i class="fas fa-star"></i>
+            </article>
+
+            <!-- Product Card 5 -->
+            <article class="product-card">
+              <a href="detail.html">
+                <img src="assets/products/product5.png" alt="Product 5" />
+              </a>
+              <div class="product-grid-info">
+                <div class="product-details">
+                  <a href="detail.html"> <h4>Product 5</h4> </a>
+                  <h6>Summer Vibes Shirt</h6>
+                </div>
+                <div class="prices">
+                  <p class="price">400.000</p>
+                  <p class="price-old">450000</p>
                 </div>
               </div>
-              <div class="prices">
-                <p class="price">400.000</p>
-                <p class="price-old">450000</p>
-              </div>
-            </div>
-          </div>
-          <div class="product-card">
-            <img src="assets/products/product6.png" alt="Product 6" />
-            <div class="product-info">
-              <div class="product-details">
-                <h4>Product 6</h4>
-                <h6>Summer Vibes Shirt</h6>
-                <div class="stargazers_count">
-                  5.0 <i class="fas fa-star"></i>
+            </article>
+
+            <!-- Product Card 6 -->
+            <article class="product-card">
+              <a href="detail.html">
+
+                <img src="assets/products/product6.png" alt="Product 6" />
+              </a>
+              <div class="product-grid-info">
+                <div class="product-details">
+                  <a href="detail.html"> <h4>Product 6</h4> </a>
+                  <h6>Summer Vibes Shirt</h6>
+                </div>
+                <div class="prices">
+                  <p class="price">400.000</p>
+                  <p class="price-old">420.000</p>
                 </div>
               </div>
-              <div class="prices">
-                <p class="price">400.000</p>
-                <p class="price-old">420.000</p>
-              </div>
-            </div>
+            </article>
           </div>
+
+          <!-- Pagination -->
+          <nav class="paginated-items" aria-label="Pagination">
+            <button class="page-item" aria-label="Previous page">&lt;</button>
+            <button class="page-item" aria-current="page">1</button>
+            <button class="page-item">2</button>
+            <button class="page-item">3</button>
+            <button class="page-item">4</button>
+            <button class="page-item">5</button>
+            <button class="page-item" aria-label="Next page">&gt;</button>
+          </nav>
         </div>
-        <div class="paginated-items">
-          <div class="page-item"><</div>
-          <div class="page-item">1</div>
-          <div class="page-item">2</div>
-          <div class="page-item">3</div>
-          <div class="page-item">4</div>
-          <div class="page-item">5</div>
-          <div class="page-item">></div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-content">
+          <p>&copy; 2024 Dopamean Studio. All rights reserved.</p>
         </div>
-      </div>
-    </div>
-  </main>
-  <div class="footer">
-    <div class="footer-content">
-      <p>&copy; 2024 Dopamean Studio. All rights reserved.</p>
-    </div>
-  </body>
-</html>
+      </footer>
+    </body>
+  </html>
