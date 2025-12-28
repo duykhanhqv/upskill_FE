@@ -41,7 +41,9 @@ $color-border: #e5e7eb;
 $color-bg: #ffffff;
 $color-bg-light: #f9fafb;
 $color-white: white;
-$color-black: black;
+$color-black: #111827;
+$color-bg-black: #111827;
+$color-bg-light-gray: #f8f8f8;
 
 // Base Styles
 body {
@@ -58,6 +60,147 @@ body {
 
 p {
   margin: 0;
+}
+h1,
+h2 {
+  margin: 0;
+}
+
+.user-input {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  input {
+    width: 100%;
+    height: 44px;
+    padding: 12px 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    color: #1f2937;
+    outline: none;
+  }
+  label {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: $color-black;
+    font-weight: 600;
+  }
+}
+
+.order-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 24px;
+  .item-image {
+    img {
+      width: 96px;
+      height: 108px;
+      object-fit: cover;
+    }
+  }
+  .item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    .item-info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .item-name {
+        font-family: $font-primary;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+      }
+      .item-size {
+        font-family: $font-primary;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        color: $color-gray;
+      }
+    }
+    .item-quantity {
+      height: 40px;
+      width: 110px;
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      border-radius: 8px;
+      background-color: $color-bg-light-gray;
+      border-radius: 32px;
+
+      .qty-btn {
+        width: 24px;
+        height: 24px;
+        border: none;
+        font-size: 16px;
+        font-weight: 400;
+        color: $color-black;
+        background-color: $color-bg;
+        padding: 0;
+        cursor: pointer;
+        transition: all 0.2s;
+        border: 1px solid $color-border;
+        border-radius: 12px;
+
+        &:hover {
+          background-color: $color-bg-light-gray;
+        }
+
+        &:active {
+          transform: scale(0.95);
+        }
+      }
+
+      input {
+        border: none;
+        text-align: center;
+        width: 40px;
+        font-size: 16px;
+        font-weight: 600;
+        color: $color-gray;
+        background: transparent;
+        outline: none;
+        padding: 0;
+
+        /* Hide number input arrows */
+        -moz-appearance: textfield;
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+    }
+  }
+  .item-price {
+    display: flex;
+    flex-direction: column;
+
+    .price {
+      font-family: $font-primary;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 24px;
+
+      color: $color-black;
+    }
+    .original-price {
+      font-family: $font-primary;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      color: $color-gray;
+      text-decoration: line-through;
+    }
+  }
 }
 @media (min-width: 1024px) {
   // Header
@@ -82,14 +225,16 @@ p {
         align-items: flex-start;
         gap: 0;
         min-width: 150px;
-
-        h1 {
-          font-family: $font-blacker-bold;
-          font-size: 24px;
-          font-weight: 700;
-          margin: 0;
-          color: $color-black;
-          letter-spacing: 1px;
+        a {
+          text-decoration: none;
+          h1 {
+            font-family: $font-blacker-bold;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0;
+            color: $color-black;
+            letter-spacing: 1px;
+          }
         }
 
         .tagline {
@@ -193,7 +338,7 @@ p {
       font-size: 18px;
       font-weight: 600;
       margin: 0 0 24px 0;
-      color: #4b5563;
+      color: $color-gray;
     }
     ul {
       li {
@@ -455,32 +600,32 @@ p {
 
   .paginated-items {
     display: flex;
-        justify-content: center;
-        gap: 12px;
-        margin-top: 40px;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 40px;
 
-        .page-item {
-          font-family: $font-primary;
-          cursor: pointer;
-          color: $color-black;
-          background-color: $color-bg-light;
-          border:none;
-          padding: 8px 12px;
-          border-radius: 8px;
-          font-weight: 500;
-        }
+    .page-item {
+      font-family: $font-primary;
+      cursor: pointer;
+      color: $color-black;
+      background-color: $color-bg-light;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-weight: 500;
+    }
   }
 
   // Footer
   .footer-content {
-      padding: 20px 85px;
-      border-top: 1px solid $color-border;
-      text-align: center;
-      font-family: $font-primary;
-      font-size: 14px;
-      line-height: 20px;
-      font-weight: 400;
-      color: $color-gray;
+    padding: 20px 85px;
+    border-top: 1px solid $color-border;
+    text-align: center;
+    font-family: $font-primary;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: $color-gray;
   }
 
   // Product Detail Page
@@ -526,14 +671,14 @@ p {
             font-family: $font-primary;
             font-size: 36px;
             font-weight: 600;
-            color: #111827;
+            color: $color-black;
             margin: 24px 0 8px 0;
           }
           .product-description {
             font-family: $font-primary;
             font-size: 16px;
             font-weight: 400;
-            color: #4b5563;
+            color: $color-gray;
             line-height: 24px;
             margin: 0;
           }
@@ -549,7 +694,7 @@ p {
             font-size: 12px;
             line-height: 16px;
             font-weight: 400;
-            color: #4b5563;
+            color: $color-gray;
             border: 1px solid #e5e7eb;
             border-radius: 16px;
             width: 153px;
@@ -592,7 +737,7 @@ p {
             font-family: $font-primary;
             font-size: 16px;
             text-decoration: line-through;
-            color: #4b5563;
+            color: $color-gray;
             margin: 0;
           }
         }
@@ -653,7 +798,7 @@ p {
           width: 178px;
           height: 52px;
           padding: 16px;
-          background-color: #111827;
+          background-color: $color-black;
           color: $color-white;
           font-family: $font-primary;
           font-size: 16px;
@@ -672,6 +817,139 @@ p {
     .recommended-products {
       h2 {
         line-height: 40px;
+      }
+    }
+  }
+
+  .checkout-page {
+    width: 1296px;
+    padding: 40px 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 52px;
+    margin: 0 auto;
+    .page-title {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      h1 {
+        font-family: "Poppins", sans-serif;
+        font-size: 36px;
+        line-height: 40px;
+        font-style: semibold;
+        margin: 0;
+      }
+      .breadcrumb {
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        font-size: medium;
+        color: $color-gray;
+        a {
+          font-family: "Poppins", sans-serif;
+          text-decoration: none;
+          font-weight: medium;
+          color: $color-gray;
+        }
+      }
+    }
+    .page-content {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      .checkout-details {
+        width: 638px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        .contact-info {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          border: 1px solid #e5e7eb;
+          border-radius: 36px;
+          .contact-header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 12px;
+            padding: 24px;
+            border-bottom: 1px solid #e5e7eb;
+            i {
+              font-size: 24px;
+              color: $color-black;
+            }
+          }
+          .contact-method {
+            padding: 24px;
+            display: flex;
+            flex-direction: row;
+            gap: 24px;
+          }
+        }
+        .shipping-address {
+          padding: 24px;
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          border: 1px solid #e5e7eb;
+          border-radius: 36px;
+          .shipping-header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 12px;
+            i {
+              font-size: 24px;
+              color: $color-black;
+            }
+          }
+          .shipping-address-form {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+          }
+        }
+      }
+      .order-summary {
+        width: 618px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        .order-total {
+          border-top: 1px solid $color-border;
+          padding-top: 24px;
+            font-family: $font-primary;
+            .order-total-details {
+              display: flex;
+              flex-direction: column  ;
+              gap: 8px;
+              .sub-total, .shipping-estimate {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+              }
+            }
+            .total{
+              padding: 24px 0;
+              font-size: 16px;
+              font-weight: 600;
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+            }
+          }
+          .confirm-order{
+            height: 52px;
+            background-color: $color-bg-black;
+            color: $color-white;
+            font-family: $font-primary;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            border-radius: 24px;
+          }
+        
       }
     }
   }
@@ -730,8 +1008,8 @@ p {
     }
 
     main {
-        max-width: 360px;
-        margin: auto;
+      max-width: 360px;
+      margin: auto;
       padding: 24px;
       display: flex;
       flex-direction: column;
@@ -1124,7 +1402,7 @@ p {
           cursor: pointer;
           color: $color-black;
           background-color: $color-bg-light;
-          border:none;
+          border: none;
           padding: 8px 12px;
           border-radius: 8px;
           font-weight: 500;

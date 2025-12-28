@@ -29,12 +29,140 @@ body {
 * {
   box-sizing: border-box;
 }
-i {
-  content: "\eb1c";
 
-}
 p {
   margin: 0;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+.user-input {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.user-input input {
+  width: 100%;
+  height: 44px;
+  padding: 12px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #1f2937;
+  outline: none;
+}
+.user-input label {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #111827;
+  font-weight: 600;
+}
+
+.order-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 24px;
+}
+.order-item .item-image img {
+  width: 96px;
+  height: 108px;
+  object-fit: cover;
+}
+.order-item .item-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.order-item .item-details .item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.order-item .item-details .item-info .item-name {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.order-item .item-details .item-info .item-size {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #4b5563;
+}
+.order-item .item-details .item-quantity {
+  height: 40px;
+  width: 110px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  border-radius: 32px;
+}
+.order-item .item-details .item-quantity .qty-btn {
+  width: 24px;
+  height: 24px;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: #111827;
+  background-color: #ffffff;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}
+.order-item .item-details .item-quantity .qty-btn:hover {
+  background-color: #f8f8f8;
+}
+.order-item .item-details .item-quantity .qty-btn:active {
+  transform: scale(0.95);
+}
+.order-item .item-details .item-quantity input {
+  border: none;
+  text-align: center;
+  width: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #4b5563;
+  background: transparent;
+  outline: none;
+  padding: 0;
+  /* Hide number input arrows */
+  -moz-appearance: textfield;
+}
+.order-item .item-details .item-quantity input::-webkit-outer-spin-button, .order-item .item-details .item-quantity input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.order-item .item-price {
+  display: flex;
+  flex-direction: column;
+}
+.order-item .item-price .price {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #111827;
+}
+.order-item .item-price .original-price {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #4b5563;
+  text-decoration: line-through;
 }
 
 @media (min-width: 1024px) {
@@ -61,12 +189,15 @@ p {
     gap: 0;
     min-width: 150px;
   }
-  header .header-container .logo h1 {
+  header .header-container .logo a {
+    text-decoration: none;
+  }
+  header .header-container .logo a h1 {
     font-family: "blacker_sans_bold", sans-serif;
     font-size: 24px;
     font-weight: 700;
     margin: 0;
-    color: black;
+    color: #111827;
     letter-spacing: 1px;
   }
   header .header-container .logo .tagline {
@@ -101,7 +232,7 @@ p {
     outline: none;
     font-size: 14px;
     font-family: "Poppins", sans-serif;
-    color: black;
+    color: #111827;
   }
   header .header-container .search-box .search-input::placeholder {
     color: #9ca3af;
@@ -119,7 +250,7 @@ p {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    color: black;
+    color: #111827;
     font-size: 20px;
     position: relative;
     transition: color 0.2s;
@@ -184,7 +315,7 @@ p {
     border-radius: 4px;
   }
   main ul li .category-item:hover span {
-    color: black;
+    color: #111827;
   }
   main .filter-section {
     border-bottom: #e5e7eb 1px solid;
@@ -195,7 +326,7 @@ p {
     font-size: 20px;
     font-weight: 600;
     margin: 0 0 24px 0;
-    color: black;
+    color: #111827;
   }
   main .filter-section .price-range-slider {
     width: 100%;
@@ -258,7 +389,7 @@ p {
     font-family: "Poppins", sans-serif;
     font-size: 16px;
     background-color: white;
-    color: black;
+    color: #111827;
     outline: none;
     -moz-appearance: textfield;
     appearance: textfield;
@@ -286,7 +417,7 @@ p {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 24px;
-    color: black;
+    color: #111827;
   }
   main .sort-order .sort-options {
     display: flex;
@@ -312,7 +443,7 @@ p {
     user-select: none;
   }
   main .sort-order .sort-options .sort-option:hover span {
-    color: black;
+    color: #111827;
   }
   main .product-grid {
     display: grid;
@@ -348,7 +479,7 @@ p {
   }
   main .product-grid .product-card .product-grid-info h4 {
     font-family: "Poppins", sans-serif;
-    color: black;
+    color: #111827;
     font-weight: bold;
     font-size: 16px;
     margin: 0;
@@ -376,7 +507,7 @@ p {
     font-weight: bold;
     font-family: "Poppins", sans-serif;
     font-size: 16px;
-    color: black;
+    color: #111827;
   }
   main .product-grid .product-card .product-grid-info .prices .price-old {
     font-family: "Poppins", sans-serif;
@@ -393,7 +524,7 @@ p {
   .paginated-items .page-item {
     font-family: "Poppins", sans-serif;
     cursor: pointer;
-    color: black;
+    color: #111827;
     background-color: #f9fafb;
     border: none;
     padding: 8px 12px;
@@ -504,7 +635,7 @@ p {
     font-family: "Poppins", sans-serif;
     font-size: 32px;
     font-weight: 600;
-    color: black;
+    color: #111827;
     margin: 0;
   }
   .product-detail-container .product-main .product-info .prices .price-old {
@@ -580,6 +711,137 @@ p {
   .product-detail-container .recommended-products h2 {
     line-height: 40px;
   }
+  .checkout-page {
+    width: 1296px;
+    padding: 40px 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 52px;
+    margin: 0 auto;
+  }
+  .checkout-page .page-title {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .checkout-page .page-title h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 36px;
+    line-height: 40px;
+    font-style: semibold;
+    margin: 0;
+  }
+  .checkout-page .page-title .breadcrumb {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-size: medium;
+    color: #4b5563;
+  }
+  .checkout-page .page-title .breadcrumb a {
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    font-weight: medium;
+    color: #4b5563;
+  }
+  .checkout-page .page-content {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+  .checkout-page .page-content .checkout-details {
+    width: 638px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .checkout-page .page-content .checkout-details .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border: 1px solid #e5e7eb;
+    border-radius: 36px;
+  }
+  .checkout-page .page-content .checkout-details .contact-info .contact-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    padding: 24px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .checkout-page .page-content .checkout-details .contact-info .contact-header i {
+    font-size: 24px;
+    color: #111827;
+  }
+  .checkout-page .page-content .checkout-details .contact-info .contact-method {
+    padding: 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+  .checkout-page .page-content .checkout-details .shipping-address {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border: 1px solid #e5e7eb;
+    border-radius: 36px;
+  }
+  .checkout-page .page-content .checkout-details .shipping-address .shipping-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+  .checkout-page .page-content .checkout-details .shipping-address .shipping-header i {
+    font-size: 24px;
+    color: #111827;
+  }
+  .checkout-page .page-content .checkout-details .shipping-address .shipping-address-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .checkout-page .page-content .order-summary {
+    width: 618px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .checkout-page .page-content .order-summary .order-total {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 24px;
+    font-family: "Poppins", sans-serif;
+  }
+  .checkout-page .page-content .order-summary .order-total .order-total-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .checkout-page .page-content .order-summary .order-total .order-total-details .sub-total, .checkout-page .page-content .order-summary .order-total .order-total-details .shipping-estimate {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .checkout-page .page-content .order-summary .order-total .total {
+    padding: 24px 0;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .checkout-page .page-content .order-summary .confirm-order {
+    height: 52px;
+    background-color: #111827;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    border-radius: 24px;
+  }
 }
 @media (max-width: 1024px) {
   body {
@@ -624,7 +886,7 @@ p {
     outline: none;
     font-size: 14px;
     font-family: "Poppins", sans-serif;
-    color: black;
+    color: #111827;
   }
   body .header-container .search-box .search-input::placeholder {
     color: #9ca3af;
@@ -690,7 +952,7 @@ p {
     font-size: 20px;
     font-weight: 600;
     margin: 0;
-    color: black;
+    color: #111827;
   }
   body main .sort-filter-mobile .side-bar-mobile .mobile-filter-header .close-filter-btn {
     background: none;
@@ -706,7 +968,7 @@ p {
     justify-content: center;
   }
   body main .sort-filter-mobile .side-bar-mobile .mobile-filter-header .close-filter-btn:hover {
-    color: black;
+    color: #111827;
   }
   body main .sort-filter-mobile .side-bar-mobile section {
     margin-bottom: 24px;
@@ -752,7 +1014,7 @@ p {
     font-size: 16px;
     font-weight: 600;
     margin: 0 0 16px 0;
-    color: black;
+    color: #111827;
   }
   body main .sort-filter-mobile .side-bar-mobile .price-range-slider {
     width: 100%;
@@ -769,14 +1031,14 @@ p {
     appearance: none;
     width: 20px;
     height: 20px;
-    background: black;
+    background: #111827;
     cursor: pointer;
     border-radius: 50%;
   }
   body main .sort-filter-mobile .side-bar-mobile .price-range-slider::-moz-range-thumb {
     width: 20px;
     height: 20px;
-    background: black;
+    background: #111827;
     cursor: pointer;
     border-radius: 50%;
     border: none;
@@ -847,7 +1109,7 @@ p {
     font-size: 20px;
     font-weight: 600;
     margin: 0;
-    color: black;
+    color: #111827;
   }
   body main .sort-filter-mobile .sort-bar-mobile .mobile-sort-header .close-sort-btn {
     background: none;
@@ -863,7 +1125,7 @@ p {
     justify-content: center;
   }
   body main .sort-filter-mobile .sort-bar-mobile .mobile-sort-header .close-sort-btn:hover {
-    color: black;
+    color: #111827;
   }
   body main .sort-filter-mobile .sort-bar-mobile .sort-order-mobile {
     margin-bottom: 0;
@@ -893,7 +1155,7 @@ p {
     width: 20px;
     height: 20px;
     cursor: pointer;
-    accent-color: black;
+    accent-color: #111827;
   }
   body main .sort-filter-mobile .sort-bar-mobile .sort-option span {
     flex: 1;
@@ -934,7 +1196,7 @@ p {
   }
   body main .product-list .product-grid .product-grid-info h4 {
     font-family: "Poppins", sans-serif;
-    color: black;
+    color: #111827;
     font-weight: bold;
     font-size: 16px;
     margin: 0;
@@ -962,7 +1224,7 @@ p {
     font-weight: bold;
     font-family: "Poppins", sans-serif;
     font-size: 16px;
-    color: black;
+    color: #111827;
   }
   body main .product-list .product-grid .product-grid-info .prices .price-old {
     font-family: "Poppins", sans-serif;
@@ -979,7 +1241,7 @@ p {
   body main .paginated-items .page-item {
     font-family: "Poppins", sans-serif;
     cursor: pointer;
-    color: black;
+    color: #111827;
     background-color: #f9fafb;
     border: none;
     padding: 8px 12px;

@@ -104,4 +104,40 @@ document.addEventListener('DOMContentLoaded', function() {
       products.forEach(product => productGrid.appendChild(product));
     });
   });
+
+  // Size selection functionality
+  const sizeRadios = document.querySelectorAll('input[name="size"]');
+  sizeRadios.forEach(radio => {
+    radio.addEventListener('change', function () {
+      // Update the size label
+      const sizeLabel = document.querySelector('.product-size label[for="size"]');
+      if (sizeLabel) {
+        sizeLabel.textContent = `Size: ${this.value}`;
+      }
+    });
+  });
+
+  // Quantity selector functionality
+  const quantitySelectors = document.querySelectorAll('.item-quantity');
+  quantitySelectors.forEach(selector => {
+    const minusBtn = selector.querySelector('.minus');
+    const plusBtn = selector.querySelector('.plus');
+    const input = selector.querySelector('input');
+    
+    if (minusBtn) {
+      minusBtn.addEventListener('click', () => {
+        const currentValue = parseInt(input.value);
+        if (currentValue > 1) {
+          input.value = currentValue - 1;
+        }
+      });
+    }
+    
+    if (plusBtn) {
+      plusBtn.addEventListener('click', () => {
+        const currentValue = parseInt(input.value);
+        input.value = currentValue + 1;
+      });
+    }
+  });
 });
